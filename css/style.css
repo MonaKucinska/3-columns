@@ -78,15 +78,27 @@ body {
   display: flex;
 }
 
+article {
+  padding: 3rem;
+}
+
 h1 {
   color: var(--lightGrey);
   font-family: "Big Shoulders Display", sans-serif;
   text-transform: uppercase;
+  font-size: 3rem;
 }
 
 p {
   color: var(--neutralWhite);
   font-family: "Lexend Deca", sans-serif;
+  margin: 0rem 0.5rem;
+  padding: 2rem 0rem;
+  line-height: 2rem;
+}
+
+img {
+  padding-bottom: 2.5rem;
 }
 
 .sedan {
@@ -113,6 +125,7 @@ p {
 
 /* MEDIA QUERIES */
 
+/* Mobile screen */
 @media screen and (max-width: 375px) {
   #container {
     flex-direction: column;
@@ -121,22 +134,23 @@ p {
   article {
     width: 100vw;
     height: 80vh;
-    padding: 3rem;
   }
+}
 
-  img {
-    padding-bottom: 2.5rem;
-
-  }
-
-  h1 {
-     font-size: 3rem;
-  }
-
-  p {
-    margin: 0rem 0.5rem;
-    padding: 2rem 0rem;
-    line-height: 2rem;
+/* Computer screen */
+@media screen and (min-width: 376px) and (max-width: 1440px) {
+  
+  #container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0rem;
   }
   
+  article {
+    width: 25%;
+    height: 60%;
+
+  }
+
 }
