@@ -1,0 +1,142 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+/* Variables */
+:root {
+  --primaryOrange: hsl(31, 77%, 52%);
+  --primaryCyan: hsl(184, 100%, 22%);
+  --primaryDarkCyan: hsl(179, 100%, 13%);
+  --neutralWhite: hsla(0, 0%, 100%, 0.75);
+  --lightGrey: hsl(0, 0%, 95%); 
+}
+
+/* Reset */
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+/* Utilities */
+a {
+  text-decoration: none;
+  color:var(--primaryDarkCyan);
+  cursor: pointer;
+}
+
+a:hover {
+  color:var(--primaryOrange);
+}
+
+.btn {
+  background-color: var(--lightGrey);  
+  border-radius: 25px;
+  border: 3px solid var(--lightGrey);
+  cursor: pointer;
+  padding: 0.9rem 1.4rem;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+/* Sedan button */
+.sedan > .btn {
+  color:var(--primaryOrange);
+}
+
+.sedan > .btn:hover {
+  color:var(--lightGrey);
+  background-color: var(--primaryOrange);
+}
+
+/* SUV button */
+.suv > .btn {
+  color:var(--primaryCyan);
+}
+
+.suv > .btn:hover {
+  color:var(--lightGrey);
+  background-color: var(--primaryCyan);
+}
+
+/* Luxury button */
+.luxury > .btn {
+  color:var(--primaryDarkCyan);
+}
+
+.luxury > .btn:hover {
+  color:var(--lightGrey);
+  background-color: var(--primaryDarkCyan);
+}
+
+
+/* Main styling */
+body {
+  font-size: 1rem;
+}
+
+#container {
+  background-color: var(--lightGrey);
+  display: flex;
+}
+
+h1 {
+  color: var(--lightGrey);
+  font-family: "Big Shoulders Display", sans-serif;
+  text-transform: uppercase;
+}
+
+p {
+  color: var(--neutralWhite);
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.sedan {
+  background-color: var(--primaryOrange);
+}
+
+.suv {
+  background-color: var(--primaryCyan);
+}
+
+.luxury {
+  background-color: var(--primaryDarkCyan);
+}
+
+
+/* Footer */
+.attribution {
+  font-size: 13px;
+  color:var(--primaryDarkCyan);
+  margin: 1rem auto;
+  text-align: center;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 375px) {
+  #container {
+    flex-direction: column;
+  }
+
+  article {
+    width: 100vw;
+    height: 80vh;
+    padding: 3rem;
+  }
+
+  img {
+    padding-bottom: 2.5rem;
+
+  }
+
+  h1 {
+     font-size: 3rem;
+  }
+
+  p {
+    margin: 0rem 0.5rem;
+    padding: 2rem 0rem;
+    line-height: 2rem;
+  }
+  
+}
